@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+header {
+    width: 100%;
+    height: 100vh;
+}
+
+nav {
+    width: 100%;
+    height: 70px;
+    position: fixed;
+    z-index: 10;
+    background: #002d70;
+
+}
+
+.nav_in {
+    width: 90%;
+    height: 70px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav_in button {
+    color: #32e09d;
+}
+
+.logoDiv {
+    display: grid;
+    column-gap: 200px;
+    grid-template-columns: auto auto;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.logoDiv img {
+    width: 150px;
+    height: auto;
+}
+
+.telfon {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    justify-items: center;
+    padding: 5px 10px;
+    border-radius: 5px;
+    /* border: 1px solid white; */
+
+}
+
+.telfon .tel1 {
+    display: block;
+    margin-left: 5px;
+    color: #fff;
+
+}
+
+.telfon .tel2 {
+    display: none;
+    margin-left: 5px;
+    color: #fff;
+
+}
+
+.lineNavbar {
+    width: 30px;
+    height: 30px;
+    padding: 5px 0;
+
+}
+
+.lineNavbar div {
+    width: 18px;
+    height: 2px;
+    margin: auto;
+    margin-top: 2px;
+    background-color: black;
+}
+
+.header_box {
+    width: 90%;
+    height: auto;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 150px;
+}
+
+.header_chap {
+    width: calc(100% / 2 - 10px);
+    height: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+}
+
+.header_chap h2 {
+    font-size: 60px;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+    color: #002d70;
+}
+
+.header_chap button {
+    width: 200px;
+    height: 45px;
+    border-radius: 8px;
+    background-color: #32e09d;
+    color: white;
+    font-size: 18px;
+    transition: .5 s;
+}
+
+.header_chap button:hover {
+    background-color: #002d70;
+
+}
+
+.header_ong {
+    width: calc(100% / 2.5 - 10px);
+    height: 400px;
+
+}
+
+
+.header_ong .mySwiper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+.header_ong .mySwiper img {
+    width: 400px;
+    height: 400px;
+    border-radius: 8px;
+    margin: auto;
+}
+
+
+@media screen and (max-width:770px) {
+    * {
+        font-size: 20px;
+    }
+
+    .logoDiv {
+        column-gap: 100px;
+    }
+
+    .logoDiv select {
+        width: 100px;
+    }
+
+    .telfon .tel1 {
+        display: none;
+    }
+
+    .telfon .tel2 {
+        display: block;
+    }
+
+    .header_box {
+        padding-top: 100px;
+        flex-wrap: wrap-reverse;
+    }
+
+    .header_chap {
+        width: calc(100% / 1 - 10px);
+        margin: auto;
+    }
+
+    .header_chap h2 {
+        font-size: 45px;
+        text-align: center;
+    }
+
+    .header_ong {
+        width: calc(100% / 1 - 10px);
+        margin: auto;
+
+    }
+}
+
+
+
+
+
+@media screen and (max-width:420px) {
+    * {
+        font-size: 18px;
+    }
+
+    .logoDiv {
+        width: 250px;
+        column-gap: 30px;
+    }
+
+    .logoDiv img {
+        width: 150px;
+    }
+
+    .logoDiv select {
+        width: 80px;
+    }
+
+
+
+    .header_chap {
+        height: 200px;
+        padding: 0;
+    }
+
+    .header_chap h2 {
+        font-size: 30px;
+    }
+
+    .header_ong {
+        height: 400px;
+    }
+
+}
