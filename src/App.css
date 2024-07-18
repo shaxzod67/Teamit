@@ -156,10 +156,62 @@ nav {
     border-radius: 8px;
     margin: auto;
 }
+
 .select {
     outline: none;
     border: none;
 }
+
+.kurs_box {
+    width: 90%;
+    height: 400px;
+    margin: auto;
+    padding: 80px 0px 10px 0px;
+    display: grid;
+    grid-template-columns: auto auto;
+    transition: .7s ease-in;
+    gap: 10px;
+}
+
+.kurs_box1 {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    justify-content: start;
+    column-gap: 10px;
+    padding-top: 10px;
+    padding: 0 20px;
+    border-radius: 8px;
+    background-color: #fff;
+    transition: .5s;
+}
+
+.kurs_box1:hover {
+    border: 1px solid #002d70;
+    background-color: #f2f2f2;
+}
+
+.kurs_box1 img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+.select_box button {
+    padding: 5px 7px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 10px;
+    color: #fff;
+    background-color: #002d70;
+}
+
+.select_box button:active {
+    background-color: #1f5ebd58;
+}
+
 
 
 @media screen and (max-width:770px) {
@@ -250,6 +302,20 @@ nav {
     .header_ong {
         height: 350px;
         margin-bottom: 20px;
+    }
+
+    .kurs_box {
+        height: auto;
+        grid-template-columns: auto;
+    }
+
+    .kurs_box1 {
+        padding: 10px;
+    }
+
+    .kurs_box1 img {
+        width: 60px;
+        height: 60px;
     }
 
 }
