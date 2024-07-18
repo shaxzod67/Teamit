@@ -156,6 +156,10 @@ nav {
     border-radius: 8px;
     margin: auto;
 }
+.select {
+    outline: none;
+    border: none;
+}
 
 
 @media screen and (max-width:770px) {
@@ -187,6 +191,8 @@ nav {
     .header_chap {
         width: calc(100% / 1 - 10px);
         margin: auto;
+        justify-content: center;
+        align-items: center;
     }
 
     .header_chap h2 {
@@ -212,11 +218,17 @@ nav {
 
     .logoDiv {
         width: 250px;
-        column-gap: 30px;
+        column-gap: 10px;
+
     }
 
     .logoDiv img {
-        width: 150px;
+        width: 190px;
+        height: auto;
+    }
+
+    .select {
+        width: 130px;
     }
 
     .logoDiv select {
@@ -226,8 +238,9 @@ nav {
 
 
     .header_chap {
-        height: 200px;
+        height: 180px;
         padding: 0;
+
     }
 
     .header_chap h2 {
@@ -235,7 +248,8 @@ nav {
     }
 
     .header_ong {
-        height: 400px;
+        height: 350px;
+        margin-bottom: 20px;
     }
 
 }

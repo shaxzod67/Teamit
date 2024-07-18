@@ -26,7 +26,7 @@ export const Header = () => {
           <div className="nav_in">
             <div className="logoDiv">
               <img src="https://www.teamit.uz/teamitlogo.png" alt="Teamit" />
-              <div className="border-2 border-black" >
+              <div>
                 {/* <select name="kurs" id="kurs">
                   <option value="0">Kurslar</option>
                   <option value="1">Web dasturlash</option>
@@ -36,7 +36,7 @@ export const Header = () => {
 
 
                 {
-                  <Select
+                  <Select className='select'
                     showSearch
                     placeholder="Kursni tanlang"
                     filterOption={(input, option) =>
