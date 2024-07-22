@@ -152,7 +152,7 @@ nav {
   border-radius: 4px;
 }
 .swiper img {
-   /* border-top-left-radius: 6px;
+  /* border-top-left-radius: 6px;
   border-top-right-radius: 6px; */
   border-radius: 4px;
 }
@@ -206,11 +206,99 @@ nav {
   column-gap: 10px;
   color: #fff;
   background-color: #002d70;
-  transition: .5s;
+  transition: 0.5s;
 }
 
 .select_box button:active {
   background-color: #1f5ebd58;
+}
+
+.ul {
+  width: 90%;
+  height: auto;
+  margin: auto;
+}
+.ul h2 {
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 600;
+}
+.span1 {
+  color: #002d70;
+  font-size: 35px;
+}
+.span2 {
+  color: #32e09d;
+  font-size: 35px;
+}
+.marquee {
+  display: flex;
+  gap: 20px;
+  margin: 50px 0;
+}
+.marquee img {
+  width: 350px;
+  height: 350px;
+  margin-left: 20px;
+  border-radius: 4px;
+  box-shadow: 15px 15px 20px gray;
+  object-fit: cover;
+}
+.natija {
+  width: 90%;
+  height: auto;
+  margin: auto;
+  display: grid;
+  grid-template-columns: auto;
+}
+.natija h2 {
+  font-size: 30px;
+  font-weight: 400;
+}
+.natija_box {
+  width: 100%;
+  height: auto;
+  margin: auto;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.natija_box1,
+.natija_box2,
+.natija_box3 {
+  width: 300px;
+  height: 150px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  /* border: 1px solid red; */
+  margin-top: 20px;
+  border-radius: 8px;
+  box-shadow: 5px 5px 40px rgba(128, 128, 128, 0.273);
+}
+.natija_box1 {
+  text-align: center;
+}
+.natija_box2 {
+  text-align: center;
+  font-size: 22px;
+}
+.natija_box3 {
+  text-align: center;
+}
+.natija_box3 h3 {
+  width: 100%;
+  font-size: 20px;
+  font-weight: 500;
+}
+.natija_box3 p {
+  text-align: start;
 }
 
 @media screen and (max-width: 770px) {
@@ -255,6 +343,15 @@ nav {
     width: calc(100% / 1 - 10px);
     margin: auto;
   }
+  .marquee img {
+    width: 300px;
+    height: 300px;
+    margin-left: 5px;
+  }
+}
+.natija_box {
+  grid-template-columns: auto;
+  gap: 10px;
 }
 
 @media screen and (max-width: 420px) {
@@ -306,5 +403,21 @@ nav {
   .kurs_box1 img {
     width: 60px;
     height: 60px;
+  }
+  .marquee img {
+    width: 200px;
+    height: 200px;
+    margin-left: 5px;
+  }
+  .natija_box{
+    align-items: center;
+    justify-content: center;
+  }
+  .natija_box1,
+  .natija_box2,
+  .natija_box3 {
+    width: 250px;
+    height: 150px;
+    
   }
 }
