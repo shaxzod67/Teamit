@@ -12,6 +12,8 @@ import { Carousel } from "antd";
 import Ul from "../Section/ul";
 import Marquee from "../Section/marquee";
 import Natija from "../Section/natija";
+import Courses from "../Section/courses";
+import Contact from "../Section/contact";
 const contentStyle = {
   height: "360px",
   color: "#fff",
@@ -34,7 +36,7 @@ export const Header = () => {
         <nav>
           <div className="nav_in">
             <div className="logoDiv">
-              <img src="https://www.teamit.uz/teamitlogo.png" alt="Teamit" />
+              <img src="https://www.teamit.uz/teamitlogo_blue.png" alt="Teamit" />
               <div>
                 <div className="select_box">
                   <button onClick={clickKurs}>
@@ -56,7 +58,7 @@ export const Header = () => {
         </nav>
 
         {kurs && (
-          <div className="w-[100%] fixed bg-[#f2f2f2] z-[8]">
+          <div className="w-[100%] fixed bg-[#f2f2f2] z-[8] ">
             <div className="kurs_box">
               <div className="kurs_box1">
                 <img
@@ -158,6 +160,8 @@ export const Header = () => {
       <Ul />
       <Marquee/>
       <Natija/>
+      <Courses/>
+      <Contact/>
     </div>
   );
 };
