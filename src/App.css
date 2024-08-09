@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.cdnfonts.com/css/helvetica-neue-5");
 * {
   margin: 0;
   padding: 0;
@@ -10,7 +12,7 @@
 
 header {
   width: 100%;
-  height: 80vh;
+  height: 95vh;
 }
 
 nav {
@@ -332,8 +334,8 @@ nav {
   justify-content: space-between;
 }
 .natija_box {
-  width: calc(100% / 3 - 50px);
-  height: 200px;
+  width: calc(100% / 3 - 20px);
+  height: 250px;
   margin-top: 50px;
   display: grid;
   grid-template-columns: auto;
@@ -350,10 +352,23 @@ nav {
   font-style: normal;
   font-variation-settings: "wdth" 100;
 }
+.natija_box div {
+  width: 350px;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+}
+.natija_box div svg {
+  font-size: 50px;
+  color: #32e09d;
+}
 .natija_box p {
-  font-size: 20px;
-  color: gray;
-  text-align: center;
+  font-size: 22px;
+  color: #002d70;
+}
+.natija_box h2 {
+  font-size: 55px;
+  color: #002d70;
 }
 .courses {
   width: 90%;
@@ -361,6 +376,8 @@ nav {
   margin: auto;
   margin-top: 100px;
   border-radius: 6px;
+  background: #f2f2f2;
+  padding: 50px;
 }
 .courses h2 {
   font-family: "Open Sans", sans-serif;
@@ -368,7 +385,7 @@ nav {
   font-weight: 700;
   font-style: normal;
   font-variation-settings: "wdth" 100;
-  font-size: 55px;
+  font-size: 65px;
   color: #002d70;
 }
 .courses_boxs {
@@ -380,32 +397,91 @@ nav {
   align-items: center;
   justify-content: space-around;
   border-radius: 6px;
+  gap: 50px;
 }
 .courses_box {
-  width: calc(100% / 3 -20px);
-  height: 380px;
-  padding: 20px;
-  display: grid;
-  grid-template-columns: auto;
-  align-items: start;
-  justify-content: center;
+  width: calc(100% / 2 - 40px);
+  height: 280px;
   border-radius: 6px;
-  transition: 0.7s;
+  transition: 0.9s;
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: start;
+  justify-content: space-between;
+  background-color: #fff;
+  padding: 20px;
+  background-image: url(./Image/Pattern.png);
 }
+
+
 .courses_box:hover {
   box-shadow: 0px 0px 50px rgba(128, 128, 128, 0.295);
 }
-.courses_box img {
-  width: 300px;
+.courses_info {
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+  /* border: 1px solid red; */
+}
+.courses_info a {
+  display: flex;
+  column-gap: 10px;
+  font-family: "Helvetica Neue", sans-serif;
+  color: #002d70;
+  font-size: 16px;
+}
+.courses_info a svg {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  /* border: 1px solid red; */
+  padding: 2px;
+  background-color: #002d70;
+  color: #fff;
+}
+.courses_img img {
+  margin-top: 20px;
+  width: 200px;
+  object-fit: cover;
+  transform: rotate(10deg);
+  /* border: 1px solid red; */
+}
+
+
+.courses_img {
+  object-fit: cover;
 }
 .courses_box h3 {
-  font-size: 25px;
-  font-family: "Open Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 700;
+  font-size: 55px;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 500;
   font-style: normal;
-  font-variation-settings: "wdth" 100;
-  color: #000000e1;
+  color: #002d70;
+}
+.courses_box p {
+  font-size: 30px;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+  color: #002d70;
+}
+.courses_box:hover {
+  background-color: #002d70;
+}
+.courses_box:hover h3 {
+  color: #fff;
+}
+.courses_box:hover p {
+  color: #fff;
+}
+.courses_box:hover a {
+  color: #fff;
+}
+.courses_box:hover svg {
+  color: #002d70;
+  background-color: #fff;
 }
 
 /* Styles for the form container */

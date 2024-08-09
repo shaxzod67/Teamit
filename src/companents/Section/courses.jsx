@@ -1,4 +1,9 @@
 import React from "react";
+import dasturalshImg from "../../Image/Dasturlash icon.png";
+import grafikImg from "../../Image/Grafik dizayn icon.png";
+import ofisImg from "../../Image/Ofis dasturlash icon.png";
+import robotImg from "../../Image/Robototexnika icon.png";
+import { GoArrowUpRight } from "react-icons/go";
 
 function Courses() {
   return (
@@ -6,26 +11,66 @@ function Courses() {
       <h2>Bizning yo'nalishlar</h2>
       <div className="courses_boxs">
         <div className="courses_box">
-          <h3>Dasturlash</h3>
-          <img
-            src="https://i.pinimg.com/564x/82/f7/1e/82f71e85266ba64104806ee9c214362c.jpg"
-            alt="web dasturlash"
-          />
+          <div className="courses_info">
+            <div>
+              <h3>Web Dasturlash</h3>
+              <p>6 oy</p>
+            </div>
+            <a href="">
+              <GoArrowUpRight />
+              Batafsil
+            </a>
+          </div>
+          <div className="courses_img">
+            <img src={dasturalshImg} alt="" />
+          </div>
         </div>
         <div className="courses_box">
-          <h3>Grafik dizayn</h3>
-          <img
-            src="https://i.pinimg.com/564x/82/cb/43/82cb438a2ec938f454b4ce5182af8a15.jpg"
-            alt="Grafik dizayn"
-          />
+          <div className="courses_info">
+            <div>
+              <h3>Grafik dizayn</h3>
+              <p>5 oy</p>
+            </div>
+            <a href="">
+              <GoArrowUpRight />
+              Batafsil
+            </a>
+          </div>
+          <div className="courses_img">
+            <img className="grafikIcon" src={grafikImg} alt="" />
+          </div>
         </div>
 
         <div className="courses_box">
-          <h3>Arxitektura</h3>
-          <img
-            src="https://i.pinimg.com/564x/eb/48/43/eb48439ea714ff4b096aaa3cbb729fa1.jpg"
-            alt="Arxitektura"
-          />
+          <div className="courses_info">
+            <div>
+              <h3>Ofis dasturlari</h3>
+              <p>4 oy</p>
+            </div>
+            <a href="">
+              <GoArrowUpRight />
+              Batafsil
+            </a>
+          </div>
+          <div className="courses_img">
+            <img src={ofisImg} alt="" />
+          </div>
+        </div>
+
+        <div className="courses_box">
+          <div className="courses_info">
+            <div>
+              <h3>Robototexnika</h3>
+              <p>5 oy</p>
+            </div>
+            <a href="">
+              <GoArrowUpRight />
+              Batafsil
+            </a>
+          </div>
+          <div className="courses_img">
+            <img src={robotImg} alt="" />
+          </div>
         </div>
       </div>
     </div>

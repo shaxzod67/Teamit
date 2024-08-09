@@ -112,7 +112,7 @@ export const Header = () => {
         <div className="header_box">
           <div className="header_chap">
             <h2>Kelajak kasblarni biz bilan o'rganing</h2>
-            <button>Ro'yxatdan otish</button>
+            <button>Bepul konsultatsiya</button>
           </div>
           <div className="header_ong">
             <Carousel autoplay className="swiper">
