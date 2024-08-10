@@ -14,6 +14,7 @@ import Marquee from "../Section/marquee";
 import Natija from "../Section/natija";
 import Courses from "../Section/courses";
 import Contact from "../Section/contact";
+import Team from "../Section/team";
 const contentStyle = {
   height: "360px",
   color: "#fff",
@@ -161,6 +162,7 @@ export const Header = () => {
       <Marquee/>
       <Natija/>
       <Courses/>
+      <Team/>
       <Contact/>
     </div>
   );
