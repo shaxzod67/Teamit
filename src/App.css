@@ -627,8 +627,22 @@ nav {
   margin-top: 10px;
 }
 .team_link a {
-  font-size: 16px;
+  font-size: 20px;
   color: #002d70;
+}
+.team_link a:nth-child(1) {
+  color: rgba(18, 18, 213, 0.767);
+}
+.team_link a:nth-child(2) {
+  background: linear-gradient( #833ab4, #fd1d1d, #fcb045);
+  border-radius: 50%;
+  color: #fff;
+  padding: 1px;
+}
+.team_link a svg:hover {
+  transform: rotate(45deg);
+  margin-right: 50px;
+  transition: 0.7s;
 }
 
 @keyframes contactani {
@@ -852,7 +866,7 @@ nav {
     font-size: 18px;
   }
   header {
-    height: 90vh;
+    height: 100vh;
   }
   .logoDiv {
     width: 250px;
@@ -1049,22 +1063,22 @@ nav {
     gap: 10px;
   }
   .team_box {
-    width: calc(100% / 2 - 10px);
-    padding: 10px;
+    width: 100%;
+    padding: 20px;
   }
 
   .team_info h2 {
-    font-size: 18px;
+    font-size: 24px;
   }
   .team_info h3 {
-    font-size: 16px;
+    font-size: 18px;
     margin-bottom: 5px;
   }
   .team_info h3 span {
-    font-size: 12px;
+    font-size: 14px;
   }
   .team_info p {
-    font-size: 12px;
+    font-size: 14px;
   }
   .team_link a {
     font-size: 12px;
