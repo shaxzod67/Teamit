@@ -32,7 +32,7 @@ function Natija() {
               </p>
               <LiaMoneyBillWaveSolid />
             </div>
-            <h2>$200+</h2>
+            <h2 id="kurslar">$200+</h2>
           </div>
         </div>
       </div>

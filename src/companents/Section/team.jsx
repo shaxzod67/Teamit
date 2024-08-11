@@ -58,6 +58,9 @@ function Team() {
   ];
   return (
     <div className="team">
+        <h2 className="team_h2">
+          Bizning Jamoa
+        </h2>
       <div className="team_boxs">
         {team.map((mall) => {
           return (

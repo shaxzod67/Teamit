@@ -7,7 +7,7 @@ import { GoArrowUpRight } from "react-icons/go";
 
 function Courses() {
   return (
-    <div className="courses">
+    <div className="courses" id="kurslar">
       <h2>Bizning yo'nalishlar</h2>
       <div className="courses_boxs">
         <div className="courses_box">

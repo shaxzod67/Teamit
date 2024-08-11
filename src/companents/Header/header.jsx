@@ -15,6 +15,7 @@ import Natija from "../Section/natija";
 import Courses from "../Section/courses";
 import Contact from "../Section/contact";
 import Team from "../Section/team";
+import Footer from "../Footer/footer";
 const contentStyle = {
   height: "360px",
   color: "#fff",
@@ -113,7 +114,7 @@ export const Header = () => {
         <div className="header_box">
           <div className="header_chap">
             <h2>Kelajak kasblarni biz bilan o'rganing</h2>
-            <button>Bepul konsultatsiya</button>
+            <button><a href="#contact">Bepul konsultatsiya</a></button>
           </div>
           <div className="header_ong">
             <Carousel autoplay className="swiper">
@@ -164,6 +165,7 @@ export const Header = () => {
       <Courses/>
       <Team/>
       <Contact/>
+      <Footer/>
     </div>
   );
 };
