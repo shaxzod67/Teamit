@@ -12,7 +12,7 @@ function Team() {
       surname: "G'aniyev",
       position: "Direktor",
       university: "Toshkent Axborot Texnologiyalar Universiteti",
-      experience: "4-yil",
+      // experience: "4-yil",
       telegram: "https://t.me/olimjonov_44",
       instagram: "https://www.instagram.com/olimjonov.23",
       gitHub: "https://github.com/shaxzod67",

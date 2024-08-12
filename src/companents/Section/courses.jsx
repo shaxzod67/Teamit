@@ -72,6 +72,39 @@ function Courses() {
             <img src={robotImg} alt="" />
           </div>
         </div>
+        <div className="courses_box">
+          <div className="courses_info">
+            <div>
+              <h3>Arxitektura</h3>
+              <p>5 oy</p>
+            </div>
+            <a href="">
+              <GoArrowUpRight />
+              Batafsil
+            </a>
+          </div>
+          <div className="courses_img">
+            <img src={robotImg} alt="" />
+          </div>
+        </div>
+
+        <div className="courses_box">
+          <div className="courses_info">
+            <div>
+              <h3>Arxitektura</h3>
+              <p>5 oy</p>
+            </div>
+            <a href="">
+              <GoArrowUpRight />
+              Batafsil
+            </a>
+          </div>
+          <div className="courses_img">
+            <img src={robotImg} alt="" />
+          </div>
+        </div>
+
+        
       </div>
     </div>
   );

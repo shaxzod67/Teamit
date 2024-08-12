@@ -422,6 +422,7 @@ nav {
   justify-content: space-between;
   /* border: 1px solid red; */
 }
+
 .courses_info a {
   display: flex;
   column-gap: 10px;
@@ -1095,6 +1096,7 @@ footer {
   .courses_box img {
     width: 250px;
   }
+  
   .courses_box h3 {
     font-size: 30px;
     text-align: center;

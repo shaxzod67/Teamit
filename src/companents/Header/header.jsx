@@ -113,7 +113,7 @@ export const Header = () => {
 
         <div className="header_box">
           <div className="header_chap">
-            <h2>Kelajak kasblarni biz bilan o'rganing</h2>
+            <h2>Qisqa vaqtda daromatli kasblar egasi bo'ling</h2>
             <button><a href="#contact">Bepul konsultatsiya</a></button>
           </div>
           <div className="header_ong">
