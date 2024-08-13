@@ -7,6 +7,14 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { IoIosArrowDown } from "react-icons/io";
 import { IoIosArrowUp } from "react-icons/io";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "./style.css";
+import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import image1 from "../../Image/Slide1.jpg";
+import image2 from "../../Image/Slide2.jpg";
+import image3 from "../../Image/Slide3.jpg";
+import image4 from "../../Image/Slide4.jpg";
+import image5 from "../../Image/Slide5.jpg";
 
 import { Carousel } from "antd";
 import Ul from "../Section/ul";
@@ -23,6 +31,7 @@ const contentStyle = {
   textAlign: "center",
   background: "#364d79",
 };
+
 export const Header = () => {
   const [kurs, setKurs] = useState(false);
   const clickKurs = () => {
@@ -38,7 +47,10 @@ export const Header = () => {
         <nav>
           <div className="nav_in">
             <div className="logoDiv">
-              <img src="https://www.teamit.uz/teamitlogo_blue.png" alt="Teamit" />
+              <img
+                src="https://www.teamit.uz/teamitlogo_blue.png"
+                alt="Teamit"
+              />
               <div>
                 <div className="select_box">
                   <button onClick={clickKurs}>
@@ -111,7 +123,7 @@ export const Header = () => {
           </div>
         )}
 
-        <div className="header_box">
+        {/* <div className="header_box">
           <div className="header_chap">
             <h2>Qisqa vaqtda daromatli kasblar egasi bo'ling</h2>
             <button><a href="#contact">Bepul konsultatsiya</a></button>
@@ -157,15 +169,36 @@ export const Header = () => {
               </div>
             </Carousel>
           </div>
-        </div>
+        </div> */}
+
+        <Swiper
+          spaceBetween={30}
+          centeredSlides={true}
+          autoplay={{
+            delay: 2500,
+            disableOnInteraction: false,
+          }}
+          pagination={{
+            clickable: true,
+          }}
+          navigation={true}
+          modules={[Autoplay, Pagination, Navigation]}
+          className="mySwiper"
+        >
+          <SwiperSlide className="swiper1"><img src={image1} alt="Teamit.uz" /></SwiperSlide>
+          <SwiperSlide className="swiper2"><img src={image2} alt="Teamit.uz" /></SwiperSlide>
+          <SwiperSlide className="swiper3"><img src={image3} alt="Teamit.uz" /></SwiperSlide>
+          <SwiperSlide className="swiper4"><img src={image4} alt="Teamit.uz" /></SwiperSlide>
+          <SwiperSlide className="swiper5"><img src={image5} alt="Teamit.uz" /></SwiperSlide>
+        </Swiper>
       </header>
       <Ul />
-      <Marquee/>
-      <Natija/>
-      <Courses/>
-      <Team/>
-      <Contact/>
-      <Footer/>
+      <Marquee />
+      <Natija />
+      <Courses />
+      <Team />
+      <Contact />
+      <Footer />
     </div>
   );
 };

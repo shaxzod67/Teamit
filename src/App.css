@@ -12,7 +12,7 @@
 
 header {
   width: 100%;
-  height: 95vh;
+  height: 100vh;
 }
 
 nav {
@@ -226,6 +226,7 @@ nav {
   width: 90%;
   height: auto;
   margin: auto;
+  margin-top: 50px;
 }
 .ul h3 {
   text-align: center;
@@ -631,7 +632,7 @@ nav {
   font-size: 20px;
   color: #002d70;
 }
-.team_link a:nth-child(1) {
+/* .team_link a:nth-child(1) {
   color: #fff;
   background: rgba(18, 18, 213, 0.767);
   padding: 2px;
@@ -650,10 +651,9 @@ nav {
   border-radius: 20px;
 }
 .team_link a svg:hover {
-  /* transform: rotate(45deg); */
   margin-right: 50px;
   transition: 0.7s;
-}
+} */
 .team .team_h2 {
   width: 90%;
   margin: auto;
