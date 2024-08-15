@@ -985,6 +985,18 @@ footer {
   .footer_right p {
     font-size: 16px;
   }
+
+  .yutuq h2 {
+    font-size: 60px;
+    margin-bottom: 20px;
+  }
+  .yutuq_boxs{
+    display: flex;
+    flex-wrap: wrap-reverse;
+  }
+  .yutuq_boxs div{
+    width: 100%;
+  }
 }
 
 /*///////////////////////////// Media 600 ///////////////////////////////  */
@@ -1220,5 +1232,8 @@ footer {
   }
   .footer_left img {
     width: 200px;
+  }
+  .yutuq h2 {
+    font-size: 45px;
   }
 }
