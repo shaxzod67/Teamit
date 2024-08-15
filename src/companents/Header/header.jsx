@@ -1,6 +1,4 @@
-// import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper/modules';
-// import { Swiper, SwiperSlide } from 'swiper/react';
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { FaPhone } from "react-icons/fa6";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -24,16 +22,13 @@ import Courses from "../Section/courses";
 import Contact from "../Section/contact";
 import Team from "../Section/team";
 import Footer from "../Footer/footer";
-const contentStyle = {
-  height: "360px",
-  color: "#fff",
-  lineHeight: "160px",
-  textAlign: "center",
-  background: "#364d79",
-};
+import Achievements from "../Section/achievements";
 
 export const Header = () => {
   const [kurs, setKurs] = useState(false);
+  const [showNav, setShowNav] = useState(true);
+  const prevScrollY = useRef(0);
+
   const clickKurs = () => {
     setKurs(!kurs);
   };
@@ -41,10 +36,28 @@ export const Header = () => {
   const handleTel = () => {
     window.location.href = "tel:+998995507799";
   };
+
+  const handleScroll = () => {
+    const currentScrollY = window.scrollY;
+
+    if (currentScrollY > prevScrollY.current) {
+      setShowNav(false);
+    } else {
+      setShowNav(true);
+    }
+    prevScrollY.current = currentScrollY;
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <div>
-      <header>
-        <nav>
+      <header >
+        <nav className={`${showNav ? 'translate-y-0' : '-translate-y-full'} transition-transform duration-300`}>
           <div className="nav_in">
             <div className="logoDiv">
               <img
@@ -72,7 +85,7 @@ export const Header = () => {
         </nav>
 
         {kurs && (
-          <div className="w-[100%] fixed bg-[#f2f2f2] z-[8] ">
+          <div className="w-full fixed bg-[#f2f2f2] z-[8] ">
             <div className="kurs_box">
               <div className="kurs_box1">
                 <img
@@ -123,54 +136,6 @@ export const Header = () => {
           </div>
         )}
 
-        {/* <div className="header_box">
-          <div className="header_chap">
-            <h2>Qisqa vaqtda daromatli kasblar egasi bo'ling</h2>
-            <button><a href="#contact">Bepul konsultatsiya</a></button>
-          </div>
-          <div className="header_ong">
-            <Carousel autoplay className="swiper">
-              <div>
-                <h3 style={contentStyle}>
-                  <img
-                    src="https://www.teamit.uz/courses/web.jpg"
-                    alt="Web dasturlash"
-                  />
-                </h3>
-              </div>
-              <div>
-                <h3 style={contentStyle}>
-                  <img
-                    src="https://www.teamit.uz/courses/graphic.jpg"
-                    alt="grafik dizayn"
-                  />
-                </h3>
-              </div>
-              <div>
-                <h3 style={contentStyle}>
-                  <img src="https://www.teamit.uz/courses/3ds.jpg" alt="" />
-                </h3>
-              </div>
-              <div>
-                <h3 style={contentStyle}>
-                  <img src="https://www.teamit.uz/courses/auto.jpg" alt="" />
-                </h3>
-              </div>
-              <div>
-                <h3 style={contentStyle}>
-                  <img src="https://www.teamit.uz/courses/ofis.jpg" alt="" />
-                </h3>
-              </div>
-              <div>
-                <h3 style={contentStyle}>
-                  {" "}
-                  <img src="https://www.teamit.uz/courses/roboto.jpg" alt="" />
-                </h3>
-              </div>
-            </Carousel>
-          </div>
-        </div> */}
-
         <Swiper
           spaceBetween={30}
           centeredSlides={true}
@@ -195,6 +160,7 @@ export const Header = () => {
       <Ul />
       <Marquee />
       <Natija />
+      <Achievements/>
       <Courses />
       <Team />
       <Contact />

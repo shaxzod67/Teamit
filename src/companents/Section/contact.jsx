@@ -54,40 +54,44 @@ const Contact = () => {
   return (
     <div id="contact">
       <div className="contact">
-    <div className="contact_left">
-      <img src="https://i.pinimg.com/564x/37/88/fe/3788fe84a42d004f25a0aaa2ca605602.jpg" alt="" />
-    </div>
-      <div className="form">
-        <h2> Bepul konsultatsiya</h2>
-        <p>
-          Telefon raqamingizni yozib qoldiring, biz sizga qoʻngʻiroq qilamiz va
-          birorta ham savolingiz javobsiz qolmasligiga harakat qilamiz
-        </p>
-        <form onSubmit={handleSubmit}>
-          <input
-            type="text"
-            name="name"
-            id="name"
-            placeholder="Ismingiz"
-            value={formData.name}
-            onChange={handleChange}
-            required
+        <div className="contact_left">
+          <img
+            src="https://i.pinimg.com/564x/37/88/fe/3788fe84a42d004f25a0aaa2ca605602.jpg"
+            alt=""
           />
-          <input
-            type="number"
-            name="phone"
-            id="phone"
-            placeholder="Telfon raqam"
-            value={formData.phone}
-            onChange={handleChange}
-            required
-          />{" "}
-          <input type="checkbox" /> <span>Shaxsiy ma'lumotlarni qayta ishlanishiga roziman</span>
-          <br /> <br />
-          <input type="submit" value="Yuborish" id="btn" />
-        </form>
+        </div>
+        <div className="form">
+          <h2> Bepul konsultatsiya</h2>
+          <p>
+            Telefon raqamingizni yozib qoldiring, biz sizga qoʻngʻiroq qilamiz
+            va birorta ham savolingiz javobsiz qolmasligiga harakat qilamiz
+          </p>
+          <form onSubmit={handleSubmit}>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Ismingiz"
+              value={formData.name}
+              onChange={handleChange}
+              required
+            />
+            <input
+              type="number"
+              name="phone"
+              id="phone"
+              placeholder="Telfon raqam"
+              value={formData.phone}
+              onChange={handleChange}
+              required
+            />{" "}
+            <input type="checkbox" />{" "}
+            <span>Shaxsiy ma'lumotlarni qayta ishlanishiga roziman</span>
+            <br /> <br />
+            <input type="submit" value="Yuborish" id="btn" />
+          </form>
+        </div>
       </div>
-    </div>
     </div>
   );
 };
