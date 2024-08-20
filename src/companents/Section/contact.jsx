@@ -55,6 +55,11 @@ const Contact = () => {
     <div id="contact">
       <div className="contact">
         <div className="contact_left">
+          <div>
+            <div className="contact_div">
+              
+            </div>
+          </div>
           <img
             src="https://www.netsweeper.com/wp-content/uploads/2021/02/ING_33594_72961.jpg"
             alt=""
