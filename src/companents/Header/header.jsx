@@ -5,16 +5,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { IoIosArrowDown } from "react-icons/io";
 import { IoIosArrowUp } from "react-icons/io";
-import { Swiper, SwiperSlide } from "swiper/react";
 import "./style.css";
-import { Autoplay, Pagination, Navigation } from "swiper/modules";
-import image1 from "../../Image/Slide1.jpg";
-import image2 from "../../Image/Slide2.jpg";
-import image3 from "../../Image/Slide3.jpg";
-import image4 from "../../Image/Slide4.jpg";
-import image5 from "../../Image/Slide5.jpg";
-
-import { Carousel } from "antd";
 import Ul from "../Section/ul";
 import Marquee from "../Section/marquee";
 import Natija from "../Section/natija";
@@ -23,11 +14,22 @@ import Contact from "../Section/contact";
 import Team from "../Section/team";
 import Footer from "../Footer/footer";
 import Achievements from "../Section/achievements";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export const Header = () => {
   const [kurs, setKurs] = useState(false);
   const [showNav, setShowNav] = useState(true);
   const prevScrollY = useRef(0);
+
+  ////////// AOS ///////
+
+  useEffect(() => {
+    AOS.init({ duration: 3000 });
+    AOS.refresh();
+  }, []);
+
+  ////////// AOS ///////
 
   const clickKurs = () => {
     setKurs(!kurs);
@@ -56,8 +58,12 @@ export const Header = () => {
 
   return (
     <div>
-      <header >
-        <nav className={`${showNav ? 'translate-y-0' : '-translate-y-full'} transition-transform duration-300`}>
+      <header>
+        <nav
+          className={`${
+            showNav ? "translate-y-0" : "-translate-y-full"
+          } transition-transform duration-300`}
+        >
           <div className="nav_in">
             <div className="logoDiv">
               <img
@@ -135,32 +141,22 @@ export const Header = () => {
             </div>
           </div>
         )}
-
-        <Swiper
-          spaceBetween={30}
-          centeredSlides={true}
-          autoplay={{
-            delay: 2500,
-            disableOnInteraction: false,
-          }}
-          pagination={{
-            clickable: true,
-          }}
-          navigation={true}
-          modules={[Autoplay, Pagination, Navigation]}
-          className="mySwiper"
-        >
-          <SwiperSlide className="swiper1"><img src={image1} alt="Teamit.uz" /></SwiperSlide>
-          <SwiperSlide className="swiper2"><img src={image2} alt="Teamit.uz" /></SwiperSlide>
-          <SwiperSlide className="swiper3"><img src={image3} alt="Teamit.uz" /></SwiperSlide>
-          <SwiperSlide className="swiper4"><img src={image4} alt="Teamit.uz" /></SwiperSlide>
-          <SwiperSlide className="swiper5"><img src={image5} alt="Teamit.uz" /></SwiperSlide>
-        </Swiper>
+        <div className="header_info">
+          <h2 data-aos="fade-right" data-aos-duration="3000">
+            Biz sizga ko‘p yillik <br /> IT tajribasini o‘rgatamiz!
+          </h2>
+          <p data-aos="fade-left" data-aos-duration="3000">
+            2020-yildan boshlab yoshlarga IT‘ni o'rgatib kelamiz!
+          </p>
+          <button data-aos="zoom-in" data-aos-duration="3000">
+           <a href="#contact"> Bepul konsultatsiya oling!</a>
+          </button>
+        </div>
       </header>
       <Ul />
       <Marquee />
       <Natija />
-      <Achievements/>
+      <Achievements />
       <Courses />
       <Team />
       <Contact />

@@ -30,13 +30,13 @@ function Natija() {
       (entries) => {
         const entry = entries[0];
         if (entry.isIntersecting && !hasAnimated) {
-          incrementValue(0, 400, setBitiruvchilar, 2000);  // 400+
-          incrementValue(0, 45, setIshgaKirish, 2000);     // 40-50%
-          incrementValue(0, 200, setBoshlangichMaosh, 2000); // $200+
-          setHasAnimated(true); // Prevent re-animation
+          incrementValue(0, 400, setBitiruvchilar, 2000); 
+          incrementValue(0, 50, setIshgaKirish, 2000);  
+          incrementValue(0, 200, setBoshlangichMaosh, 2000); 
+          setHasAnimated(true); 
         }
       },
-      { threshold: 0.5 } // Trigger when 50% of the component is in view
+      { threshold: 0.5 } 
     );
 
     if (natijaRef.current) {

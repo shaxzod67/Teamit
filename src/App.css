@@ -91,78 +91,55 @@ nav {
   margin-top: 2px;
   background-color: black;
 }
+header {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
 
-.header_box {
+.header_info {
   width: 90%;
   height: auto;
   margin: auto;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  padding-top: 150px;
-}
-
-.header_chap {
-  width: calc(100% / 2 - 10px);
-  height: 400px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: start;
-}
-
-.header_chap h2 {
-  font-size: 60px;
-  font-family: "Open Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: bold;
-  font-style: normal;
-  font-variation-settings: "wdth" 100;
-  color: #002d70;
-}
-
-.header_chap button {
-  width: 200px;
-  height: 45px;
-  border-radius: 8px;
-  background-color: #32e09d;
-  color: white;
-  font-size: 18px;
-  transition: 0.5s;
-}
-
-.header_chap button:hover {
-  background-color: #002d70;
-}
-
-.header_ong {
-  width: calc(100% / 2.5 - 10px);
-  height: 400px;
-}
-
-.header_ong .mySwiper {
-  display: flex;
-  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  margin: auto;
+  text-align: center;
+}
+.header_info h2 {
+  font-size: 85px;
+  color: #002d70;
+  font-family: "Helvetica Neue", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  line-height: 100px;
 }
 
-.header_ong .mySwiper img {
-  width: 400px;
-  height: 400px;
-  border-radius: 8px;
-  margin: auto;
+.header_info p {
+  width: 100%;
+  font-size: 25px;
+  margin: 10px 0 50px 0;
+  color: #002d70;
 }
-.swiper {
-  /* border-top-left-radius: 6px;
-  border-top-right-radius: 6px; */
-  border-radius: 4px;
+.header_info button {
+  width: 45%;
+  height: 60px;
+  background: #002d70;
+  color: #fff;
+  font-size: 30px;
+  border-radius: 6px;
 }
-.swiper img {
-  /* border-top-left-radius: 6px;
-  border-top-right-radius: 6px; */
-  border-radius: 4px;
+.header_info button:hover {
+  background: #32e09d;
 }
+
 .select {
   outline: none;
   border: none;
@@ -495,15 +472,15 @@ nav {
   margin: 0 auto;
   padding: 20px;
   border-radius: 8px;
-  background-color: #002d7020;
 }
 .form h2 {
-  font-size: 35px;
+  font-size: 55px;
   font-family: "Open Sans", sans-serif;
   font-optical-sizing: auto;
   font-weight: 700;
   font-style: normal;
   font-variation-settings: "wdth" 100;
+  color: #002d70;
 }
 .form p {
   font-family: "Open Sans", sans-serif;
@@ -512,14 +489,18 @@ nav {
   color: gray;
   font-style: normal;
   font-variation-settings: "wdth" 100;
+  font-size: 18px;
+  margin-bottom: 30px;
 }
 
 .form input[type="text"],
 .form input[type="number"],
 .form textarea {
   width: 100%;
+  height: 50px;
   padding: 10px;
   margin: 8px 0;
+  font-size: 16px;
   box-sizing: border-box;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -534,6 +515,7 @@ nav {
   margin: 8px 0;
   border: none;
   border-radius: 4px;
+  font-size: 20px;
   cursor: pointer;
 }
 
@@ -556,19 +538,28 @@ nav {
 
 .contact {
   width: 90%;
+  height: 100vh;
   display: flex;
   margin: auto;
   align-items: center;
   justify-content: center;
+  background: #f2f2f2;
+  border-radius: 6px;
 }
 .contact_left {
-  width: calc(100% / 2 - 20px);
+  width: calc(100% / 2.5 - 20px);
   display: flex;
   align-items: center;
   justify-content: center;
-  animation: contactani 7s infinite;
+  /* animation: contactani 7s infinite; */
 }
-
+.contact_left img {
+  width: 100%;
+  height: 90vh;
+  object-fit: cover;
+  background: black;
+  background-blend-mode: darken;
+}
 /* <<<<<<<<<<<<<<<<<<<<<<<<<<< TEAM CSS >>>>>>>>>>>>>>>>>>>>>>>> */
 
 .team {
@@ -680,7 +671,7 @@ nav {
   font-variation-settings: "wdth" 100;
   color: #002d70;
 }
-.yutuq_boxs{
+.yutuq_boxs {
   width: 100%;
   height: auto;
   display: flex;
@@ -689,12 +680,12 @@ nav {
   justify-content: center;
   gap: 10px;
 }
-.yutuq_boxs div{
+.yutuq_boxs div {
   width: calc(100% / 2 - 10px);
   height: auto;
   display: grid;
-   grid-template-columns: auto auto;
-   gap: 10px;
+  grid-template-columns: auto auto;
+  gap: 10px;
 }
 footer {
   width: 100%;
@@ -778,26 +769,18 @@ footer {
   header {
     height: 100vh;
   }
-  .header_box {
-    padding-top: 100px;
-    flex-wrap: wrap-reverse;
-  }
 
-  .header_chap {
-    width: calc(100% / 1 - 10px);
-    margin: auto;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .header_chap h2 {
+  .header_info h2 {
     font-size: 45px;
-    text-align: center;
+    line-height: 60px;
   }
 
-  .header_ong {
-    width: calc(100% / 1 - 10px);
-    margin: auto;
+  .header_info p {
+    font-size: 22px;
+  }
+  .header_info button {
+    width: 70%;
+    font-size: 25px;
   }
   .marquee img {
     width: 300px;
@@ -990,11 +973,11 @@ footer {
     font-size: 60px;
     margin-bottom: 20px;
   }
-  .yutuq_boxs{
+  .yutuq_boxs {
     display: flex;
     flex-wrap: wrap-reverse;
   }
-  .yutuq_boxs div{
+  .yutuq_boxs div {
     width: 100%;
   }
 }
@@ -1026,20 +1009,19 @@ footer {
     width: 80px;
   }
 
-  .header_chap {
-    height: 180px;
-    padding: 0;
+  .header_info h2 {
+    font-size: 29px;
+    line-height: 40px;
   }
 
-  .header_chap h2 {
-    font-size: 30px;
+  .header_info p {
+    font-size: 18px;
   }
-
-  .header_ong {
-    height: 350px;
-    margin-bottom: 20px;
+  .header_info button {
+    width: 90%;
+    height: 50px;
+    font-size: 20px;
   }
-
   .kurs_box {
     height: auto;
     grid-template-columns: auto;

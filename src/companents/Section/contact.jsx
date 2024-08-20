@@ -56,7 +56,7 @@ const Contact = () => {
       <div className="contact">
         <div className="contact_left">
           <img
-            src="https://i.pinimg.com/564x/37/88/fe/3788fe84a42d004f25a0aaa2ca605602.jpg"
+            src="https://www.netsweeper.com/wp-content/uploads/2021/02/ING_33594_72961.jpg"
             alt=""
           />
         </div>
