@@ -101,11 +101,11 @@
 .malumot_box{
   display: flex;
   margin-top: 50px;
+  border-radius: 6px;
 }
 .malumot_box_p p{
   padding: 10px 17px;
   font-size: 20px;
-  border: 2px solid #002d70;
   border-radius: 50%;
   margin-right: 40px;
 }

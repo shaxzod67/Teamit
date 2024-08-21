@@ -68,6 +68,10 @@ export const Header = () => {
     Navigate('/grafik')
   }
 
+  const handleWeb = () =>{
+    Navigate('/webdasturlash')
+  }
+
   return (
     <div>
       <header>
@@ -105,7 +109,7 @@ export const Header = () => {
         {kurs && (
           <div className="w-full fixed bg-[#f2f2f2] z-[8] ">
             <div className="kurs_box">
-              <div className="kurs_box1">
+              <div className="kurs_box1" onClick={handleWeb}>
                 <img
                   src="https://www.teamit.uz/courses/web.jpg"
                   alt="Web dasturlash"

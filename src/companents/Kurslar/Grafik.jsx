@@ -34,7 +34,7 @@ function Grafik() {
         </div>
         <div className="banner">
             <div className="banner_box">
-                <h1>5 oy</h1>
+                <h1>6 oy</h1>
                 <hr />
                 <h3>Davomiyligi</h3>
             </div>
