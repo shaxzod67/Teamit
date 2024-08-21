@@ -16,12 +16,15 @@ import Footer from "../Footer/footer";
 import Achievements from "../Section/achievements";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import {  useNavigate } from "react-router-dom";
+
 
 export const Header = () => {
   const [kurs, setKurs] = useState(false);
   const [showNav, setShowNav] = useState(true);
   const prevScrollY = useRef(0);
-
+  const Navigate = useNavigate()
+  
   ////////// AOS ///////
 
   useEffect(() => {
@@ -55,6 +58,15 @@ export const Header = () => {
 
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+
+
+
+  //////////////////////Navigate////////////////////
+
+  const handleGrafik = () =>{
+    Navigate('/grafik')
+  }
 
   return (
     <div>
@@ -101,7 +113,7 @@ export const Header = () => {
                 <h2>Web dasturlash</h2>
               </div>
 
-              <div className="kurs_box1">
+              <div className="kurs_box1" onClick={handleGrafik}>
                 <img
                   src="https://www.teamit.uz/courses/graphic.jpg"
                   alt="grafik dizayn"

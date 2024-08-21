@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Madimi+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+  text-decoration: none;
+  list-style: none; 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+.grafik_header{
+  max-width: 100%;
+  margin: auto;
+  display: flex;
+  background-image: url();
+  height: 500px;
+  background-color: rgba(0, 0, 0, 0.37);
+  background-blend-mode: darken;
+}
+.grafik_header_box{
+  margin: auto;
+  text-align: center;
+}
+.grafik_header_box h1{
+  color: white;
+  font-size: 60px;
+  margin-bottom: 40px;
+}
+.grafik_header_box p{
+  font-size: 25px;
+}
+.header_span{
+  color: rgb(0, 97, 0);
+}
+.banner{
+  max-width: 80%;
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  gap: 30px;
+  margin-top: 50px;
+}
+.banner_box{
+  padding: 10px 0;
+  text-align: center;
+  width: 350px;
+}
+.banner_box h1{
+  font-size: 50px;
+  color: #002d70;
+  padding: 15px;
+}
+.banner_box h3{
+  font-size: 22px;
+  padding: 15px;
+
+}
+.block{
+  width: 800px;
+  border: 5px solid #002d70;
+  padding: 40px;
+  margin: auto;
+  margin-top: 50px;
+}
+.block h3{
+  font-size: 25px;
+  font-weight: 400;
+}
+.block h3 span{
+  font-weight: 600;
+}
+.Grafik{
+  width: 800px;
+  margin: auto;
+  padding: 40px;
+  background-color: rgba(238, 232, 232, 0.74);
+  margin-top: 50px;
+}
+.Grafik h1 span{
+  color: #002d70;
+  font-weight: 700;
+}
+.Grafik h1{
+  font-weight: 500;
+}
+.Grafik p{
+  font-size: 20px;
+  font-weight: 500;
+}
+.Grafik p span{
+  font-weight: 700;
+}
+.grafik_malumot{
+  max-width: 65%;
+  margin: auto;
+  margin-top: 70px;
+}
+.grafik_malumot h1{
+  text-align: center;
+  font-size: 40px;
+}
+.malumot_box{
+  display: flex;
+  margin-top: 50px;
+}
+.malumot_box_p p{
+  padding: 10px 17px;
+  font-size: 20px;
+  border: 2px solid #002d70;
+  border-radius: 50%;
+  margin-right: 40px;
+}
+.malumot_box_child h2{
+  color: #002d70;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+.malumot_box_child ul li{
+  margin-bottom: 7px;
+}
+.button1{
+  margin: auto;
+  width: 300px;
+  margin-top: 70px;
+}
+.grafik_button{
+  padding: 10px 30px;
+  font-size: 20px;
+  /* margin: auto; */
+  cursor: pointer;
+  border: 2px solid #002d70;
+  background: transparent;
+}
+
+.grafik_ishlash{
+  max-width: 65%;
+  margin: auto;
+  margin-top: 70px;
+}
+.grafik_ishlash h1{
+  text-align: center;
+  color: #002d70;
+  margin-bottom: 30px;
+}
+.ishlash_box{
+  display: flex;
+}
+.ishlash_box h2{
+  font-size: 25px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.grafik_true{
+  font-size: 30px;
+  margin-right: 20px;
+  color: rgb(0, 100, 54);
+}
+.grafik_kurs{
+  margin-top: 70px;
+}
+.grafik_kurs h1{
+  color: #002d70;
+  text-align: center;
+}
+
+@media screen and (max-width:850px) {
+  .block{
+    max-width: 90%;
+  }
+  .Grafik{
+    max-width: 90%;
+  }
+  .banner{
+    display: grid;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
