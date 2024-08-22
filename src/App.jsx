@@ -4,8 +4,9 @@ import { Header } from "./companents/Header/header";
 import Ul from "./companents/Section/ul";
 import Natija from "./companents/Section/natija";
 import MyMarquee from "./companents/Section/marquee";
-import Grafik from "./companents/Kurslar/Grafik";
 import WebDasturlash from "./companents/Kurslar/Webdasturlash";
+import Contact from "./companents/Section/contact";
+import Dizayn from "./companents/Kurslar/Dizayn";
 function App() {
   return (
     <>
@@ -14,8 +15,10 @@ function App() {
         <Route path="/ul" element={<Ul/>}/>
         <Route path="/marquee" element={<MyMarquee/>}/>
         <Route path="/natija" element={<Natija/>}/>
-        <Route path="/grafik" element={<Grafik/>}/>
         <Route path="/webdasturlash" element={<WebDasturlash/>}/>
+        <Route path="/contact" element={<Contact/>}/>
+        <Route path="/dizayn" element={<Dizayn/>}/>
+
       </Routes>
     </>
   );

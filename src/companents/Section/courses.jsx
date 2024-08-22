@@ -4,6 +4,7 @@ import grafikImg from "../../Image/Grafik dizayn icon.png";
 import ofisImg from "../../Image/Ofis dasturlash icon.png";
 import robotImg from "../../Image/Robototexnika icon.png";
 import { GoArrowUpRight } from "react-icons/go";
+import { Link } from "react-router-dom";
 
 function Courses() {
   return (
@@ -14,11 +15,13 @@ function Courses() {
           <div className="courses_info">
             <div>
               <h3>Web Dasturlash</h3>
-              <p>6 oy</p>
+              <p>8 oy</p>
             </div>
             <a href="">
-              <GoArrowUpRight />
-              Batafsil
+              <Link to="/webdasturlash">
+                <GoArrowUpRight />
+                Batafsil
+              </Link>
             </a>
           </div>
           <div className="courses_img">
@@ -61,7 +64,7 @@ function Courses() {
           <div className="courses_info">
             <div>
               <h3>Robototexnika</h3>
-              <p>5 oy</p>
+              <p>2 oy</p>
             </div>
             <a href="">
               <GoArrowUpRight />
