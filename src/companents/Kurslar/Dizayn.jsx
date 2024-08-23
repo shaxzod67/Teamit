@@ -2,20 +2,32 @@ import { useNavigate } from "react-router-dom";
 import "./grafik.css";
 import Nav from "../Header/Nav";
 import Aos from "aos";
-import { useEffect } from "react";
-function Dizayn() {
-  ////////// AOS ///////
+import { useEffect, useState } from "react";
+import CountUp from "react-countup";
+import { useInView } from "react-intersection-observer";
 
+function Dizayn() {
   useEffect(() => {
     Aos.init({ duration: 3000 });
     Aos.refresh();
   }, []);
 
-  ////////// AOS ///////
   const navigate = useNavigate();
   const handleClick = () => {
     navigate("/contact");
   };
+
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.5,
+  });
+
+  const [activeModule, setActiveModule] = useState(1);
+
+  const handleModuleChange = (moduleNumber) => {
+    setActiveModule(moduleNumber);
+  };
+
   return (
     <>
       <div className="grafik_Course">
@@ -113,27 +125,115 @@ function Dizayn() {
           />
         </div>
       </div>
-      <div >
+      <div ref={ref} className="grafikPrice">
         <h2>
-          Dizayner maoshlari
+          Dizayner <b>Maoshlari</b>
         </h2>
-       <div className="grafik_price">
-       <div>
-          <h2>
-            <span>200$</span> <br />  eng past maosh
-          </h2>
+        <div className="grafik_price">
+          <div data-aos="fade-up-right" data-aos-duration="1000">
+            <h2>
+              <span>
+                {inView && <CountUp start={0} end={200} duration={2} />}$
+              </span>{" "}
+              <br /> Eng past maosh
+            </h2>
+          </div>
+          <div data-aos="fade-up-right" data-aos-duration="2000">
+            <h2>
+              <span>
+                {inView && <CountUp start={0} end={500} duration={2} />}$
+              </span>
+              <br /> O'rtacha maosh
+            </h2>
+          </div>
+          <div data-aos="fade-up-right" data-aos-duration="3000">
+            <h2>
+              <span>
+                {inView && <CountUp start={0} end={1500} duration={2} />}$
+              </span>{" "}
+              <br /> Eng yuqori maosh
+            </h2>
+          </div>
         </div>
-        <div>
-          <h2>
-            <span>500$</span><br />  eng past maosh
-          </h2>
+      </div>
+
+      <div className="grafik_modul">
+        <h2>
+          <b>Kurs</b> dasturi
+        </h2>
+        <div className="grafik_modul_btn">
+          {[1, 2, 3, 4, 5, 6].map((moduleNumber) => (
+            <button
+              key={moduleNumber}
+              onClick={() => handleModuleChange(moduleNumber)}
+              className={activeModule === moduleNumber ? "active" : ""}
+            >
+              Modul {moduleNumber}
+            </button>
+          ))}
         </div>
-        <div>
-          <h2>
-            <span>200$</span> <br /> eng past maosh
-          </h2>
+        <div className="grafik_modul_info">
+          {activeModule === 1 && (
+            <div>
+              <span>1 oy</span> <br />
+              Vektor dasturlarini oʻrganish
+              <ol>
+                <li>1. Illustrator</li>
+                <li>2. CorelDraw</li>
+              </ol>
+            </div>
+          )}
+          {activeModule === 2 && (
+            <div>
+            <span>2 oy</span> <br />
+            Vektor dasturlarini oʻrganish
+            <ol>
+              <li>1. Illustrator</li>
+              <li>2. CorelDraw</li>
+            </ol>
+          </div>
+          )}
+          {activeModule === 3 && (
+            <div>
+            <span>3 oy</span> <br />
+            Vektor dasturlarini oʻrganish
+            <ol>
+              <li>1. Illustrator</li>
+              <li>2. CorelDraw</li>
+            </ol>
+          </div>
+          )}
+          {activeModule === 4 && (
+           <div>
+           <span>4 oy</span> <br />
+           Vektor dasturlarini oʻrganish
+           <ol>
+             <li>1. Illustrator</li>
+             <li>2. CorelDraw</li>
+           </ol>
+         </div>
+          )}
+          {activeModule === 5 && (
+           <div>
+           <span>5 oy</span> <br />
+           Vektor dasturlarini oʻrganish
+           <ol>
+             <li>1. Illustrator</li>
+             <li>2. CorelDraw</li>
+           </ol>
+         </div>
+          )}
+          {activeModule === 6 && (
+           <div>
+           <span>6 oy</span> <br />
+           Vektor dasturlarini oʻrganish
+           <ol>
+             <li>1. Illustrator</li>
+             <li>2. CorelDraw</li>
+           </ol>
+         </div>
+          )}
         </div>
-       </div>
       </div>
     </>
   );
