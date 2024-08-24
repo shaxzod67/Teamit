@@ -27,7 +27,7 @@ export const Header = () => {
 
   return (
     <div>
-      <header>
+      <header id="nav">
         <Nav />
         <div className="header_info">
           <h2 data-aos="fade-right" data-aos-duration="3000">

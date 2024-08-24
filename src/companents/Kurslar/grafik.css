@@ -226,11 +226,11 @@
   color: black;
   border: 1px solid #f2f2f2;
 }
-.grafik_modul_btn button.active{
+.grafik_modul_btn button.active {
   background: #32e09d;
   color: #fff;
 }
-.grafik_modul_info{
+.grafik_modul_info {
   width: 90%;
   height: 200px;
   margin: 50px auto 0;
@@ -238,6 +238,58 @@
   padding: 20px;
   border-radius: 6px;
   font-size: 18px;
+}
+.grafik_work {
+  width: 90%;
+  height: auto;
+  margin: 50px auto 0;
+}
+.grafik_work h2 {
+  font-size: 45px;
+  margin-bottom: 30px;
+}
+.grafik_work ul li {
+  display: flex;
+  align-items: center;
+  font-size: 25px;
+}
+.grafik_work ul li svg {
+  color: #32e09d;
+}
+.grafik_natija {
+  width: 90%;
+  height: auto;
+  margin: 50px auto;
+  align-items: center;
+  padding: 40px 0px;
+}
+.grafik_natija h2 b {
+  font-size: 50px;
+  color: #32e09d;
+  font-weight: 600;
+}
+.grafik_natija h2 {
+  font-size: 45px;
+  margin-bottom: 30px;
+}
+.grafik_natija div {
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.grafik_natija div img {
+  width: calc(100% / 3 - 20px);
+  height: 500px;
+  object-fit: cover;
+  border-radius: 6px;
+  transition: 0.5s;
+}
+
+.grafik_natija div img:hover {
+  scale: 1.04;
 }
 
 @media screen and (max-width: 770px) {
@@ -345,10 +397,33 @@
     width: calc(100% / 6 - 0px);
     font-size: 16px;
   }
-  
-  .grafik_modul_info{
+
+  .grafik_modul_info {
     height: auto;
     font-size: 16px;
+  }
+
+  .grafik_work h2 {
+    font-size: 35px;
+  }
+  .grafik_work ul li {
+    font-size: 20px;
+  }
+
+  .grafik_natija {
+    padding: 30px 0px;
+  }
+  .grafik_natija h2 b {
+    font-size: 40px;
+  }
+  .grafik_natija h2 {
+    font-size: 35px;
+  }
+  .grafik_natija div {
+    margin-top: 50px;
+  }
+  .grafik_natija div img {
+    width: calc(100% / 2 - 20px);
   }
 }
 
@@ -428,6 +503,23 @@
     width: calc(100% / 3 - 0px);
     font-size: 16px;
   }
-  
- 
+  .grafik_work h2 {
+    font-size: 25px;
+  }
+  .grafik_work ul li {
+    font-size: 18px;
+  }
+  .grafik_natija {
+    padding: 20px 0px;
+  }
+  .grafik_natija h2 b {
+    font-size: 30px;
+  }
+  .grafik_natija h2 {
+    font-size: 25px;
+  }
+
+  .grafik_natija div img {
+    width: 100%;
+  }
 }

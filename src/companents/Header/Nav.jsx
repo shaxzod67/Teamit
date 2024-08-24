@@ -40,6 +40,9 @@ function Nav() {
   const handleWeb = () => {
     Navigate("/webdasturlash");
   };
+  const handleNav = () => {
+    Navigate("/");
+  };
   return (
     <div>
       <nav
@@ -49,7 +52,14 @@ function Nav() {
       >
         <div className="nav_in">
           <div className="logoDiv">
-            <img src="https://www.teamit.uz/teamitlogo_blue.png" alt="Teamit" />
+            <button onClick={handleNav}>
+              <a href="#nav">
+                <img
+                  src="https://www.teamit.uz/teamitlogo_blue.png"
+                  alt="Teamit"
+                />
+              </a>
+            </button>
             <div>
               <div className="select_box">
                 <button onClick={clickKurs}>

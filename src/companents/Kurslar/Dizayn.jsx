@@ -5,6 +5,14 @@ import Aos from "aos";
 import { useEffect, useState } from "react";
 import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
+import { GoTriangleRight } from "react-icons/go";
+import Contact from "../Section/contact";
+import natijarasm1 from '../../Image/natijarasm1.jpg'
+import natijarasm2 from '../../Image/natijarasm2.jpg'
+import natijarasm3 from '../../Image/natijarasm3.png'
+import natijarasm4 from '../../Image/natijarasm4.jpg'
+import natijarasm5 from '../../Image/natijarasm5.jpg'
+import natijarasm6 from '../../Image/natijarasm6.jpg'
 
 function Dizayn() {
   useEffect(() => {
@@ -61,12 +69,7 @@ function Dizayn() {
           </h2>
         </div>
       </div>
-      <div
-        className="grafik_info"
-        data-aos="fade-down"
-        data-aos-easing="linear"
-        data-aos-duration="1500"
-      >
+      <div className="grafik_info" data-aos="zoom-in" data-aos-duration="1500">
         <div>
           <h2>
             <span>Grafik qanday</span> qanday soha ?
@@ -93,7 +96,7 @@ function Dizayn() {
           />
           <img
             data-aos="zoom-in-right"
-            data-aos-duration="2000"
+            data-aos-duration="1000"
             src="https://i.pinimg.com/564x/e5/35/6c/e5356c9766b49e62e80a631f821611dd.jpg"
             alt="Teamit grafik dizayn"
           />
@@ -105,21 +108,21 @@ function Dizayn() {
           />
           <img
             data-aos="zoom-in-right"
-            data-aos-duration="2000"
+            data-aos-duration="1000"
             src="https://i.pinimg.com/564x/e5/35/6c/e5356c9766b49e62e80a631f821611dd.jpg"
             alt="Teamit grafik dizayn"
           />
         </div>
         <div>
           <img
-            data-aos="zoom-in-right"
-            data-aos-duration="3000"
+            data-aos="fade-left"
+            data-aos-duration="2000"
             src="https://i.pinimg.com/564x/e5/35/6c/e5356c9766b49e62e80a631f821611dd.jpg"
             alt="Teamit grafik dizayn"
           />
           <img
-            data-aos="zoom-in-right"
-            data-aos-duration="3000"
+            data-aos="fade-left"
+            data-aos-duration="2000"
             src="https://i.pinimg.com/564x/e5/35/6c/e5356c9766b49e62e80a631f821611dd.jpg"
             alt="Teamit grafik dizayn"
           />
@@ -130,7 +133,7 @@ function Dizayn() {
           Dizayner <b>Maoshlari</b>
         </h2>
         <div className="grafik_price">
-          <div data-aos="fade-up-right" data-aos-duration="1000">
+          <div data-aos="zoom-in-right" data-aos-duration="1000">
             <h2>
               <span>
                 {inView && <CountUp start={0} end={200} duration={2} />}$
@@ -138,7 +141,7 @@ function Dizayn() {
               <br /> Eng past maosh
             </h2>
           </div>
-          <div data-aos="fade-up-right" data-aos-duration="2000">
+          <div data-aos="zoom-in-right" data-aos-duration="2000">
             <h2>
               <span>
                 {inView && <CountUp start={0} end={500} duration={2} />}$
@@ -146,7 +149,7 @@ function Dizayn() {
               <br /> O'rtacha maosh
             </h2>
           </div>
-          <div data-aos="fade-up-right" data-aos-duration="3000">
+          <div data-aos="zoom-in-right" data-aos-duration="2500">
             <h2>
               <span>
                 {inView && <CountUp start={0} end={1500} duration={2} />}$
@@ -185,56 +188,108 @@ function Dizayn() {
           )}
           {activeModule === 2 && (
             <div>
-            <span>2 oy</span> <br />
-            Vektor dasturlarini oʻrganish
-            <ol>
-              <li>1. Illustrator</li>
-              <li>2. CorelDraw</li>
-            </ol>
-          </div>
+              <span>2 oy</span> <br />
+              Vektor dasturlarini oʻrganish
+              <ol>
+                <li>1. Illustrator</li>
+                <li>2. CorelDraw</li>
+              </ol>
+            </div>
           )}
           {activeModule === 3 && (
             <div>
-            <span>3 oy</span> <br />
-            Vektor dasturlarini oʻrganish
-            <ol>
-              <li>1. Illustrator</li>
-              <li>2. CorelDraw</li>
-            </ol>
-          </div>
+              <span>3 oy</span> <br />
+              Vektor dasturlarini oʻrganish
+              <ol>
+                <li>1. Illustrator</li>
+                <li>2. CorelDraw</li>
+              </ol>
+            </div>
           )}
           {activeModule === 4 && (
-           <div>
-           <span>4 oy</span> <br />
-           Vektor dasturlarini oʻrganish
-           <ol>
-             <li>1. Illustrator</li>
-             <li>2. CorelDraw</li>
-           </ol>
-         </div>
+            <div>
+              <span>4 oy</span> <br />
+              Vektor dasturlarini oʻrganish
+              <ol>
+                <li>1. Illustrator</li>
+                <li>2. CorelDraw</li>
+              </ol>
+            </div>
           )}
           {activeModule === 5 && (
-           <div>
-           <span>5 oy</span> <br />
-           Vektor dasturlarini oʻrganish
-           <ol>
-             <li>1. Illustrator</li>
-             <li>2. CorelDraw</li>
-           </ol>
-         </div>
+            <div>
+              <span>5 oy</span> <br />
+              Vektor dasturlarini oʻrganish
+              <ol>
+                <li>1. Illustrator</li>
+                <li>2. CorelDraw</li>
+              </ol>
+            </div>
           )}
           {activeModule === 6 && (
-           <div>
-           <span>6 oy</span> <br />
-           Vektor dasturlarini oʻrganish
-           <ol>
-             <li>1. Illustrator</li>
-             <li>2. CorelDraw</li>
-           </ol>
-         </div>
+            <div>
+              <span>6 oy</span> <br />
+              Vektor dasturlarini oʻrganish
+              <ol>
+                <li>1. Illustrator</li>
+                <li>2. CorelDraw</li>
+              </ol>
+            </div>
           )}
         </div>
       </div>
+
+      <div className="grafik_work">
+        <h2>Kursdan soʻng qayerda ishlay olasiz ?</h2>
+        <ul>
+          <li>
+            <GoTriangleRight /> Marketing 
+          </li>
+          <li>
+            <GoTriangleRight />SMM agentlik
+          </li>
+          <li>
+            <GoTriangleRight /> Dizayn studiya
+          </li>
+          <li>
+            <GoTriangleRight /> Xususiy tashkilotlar
+          </li>
+        </ul>
+      </div>
+
+      <div className="grafik_natija">
+        <h2>
+          <b>Oʻquvchilarimiz</b> kurs davomida tayyorlagan loyihalari
+        </h2>
+        <div>
+          <img
+            src={natijarasm1}
+            alt="Teamit.uz"
+          />
+          <img
+            src={natijarasm2}
+            alt="Teamit.uz"
+          />
+          <img
+            src={natijarasm3}
+            alt="Teamit.uz"
+          />
+          <img
+            src={natijarasm4}
+            alt="Teamit.uz"
+          />
+          <img
+            src={natijarasm5}
+            alt="Teamit.uz"
+          />
+          <img
+            src={natijarasm6}
+            alt="Teamit.uz"
+          />
+        </div>
+      </div>
+      <Contact />
+      <br /><br /><br />
     </>
   );
 }
