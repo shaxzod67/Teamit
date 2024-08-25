@@ -42,7 +42,7 @@ function Dizayn() {
       <div className="grafik_Course">
         <Nav />
         <div className="grafik_header">
-          <h2>Grafik dizayn</h2>
+          <h2>Veb dasturlash</h2>
           <p>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit.
             Repellendus eos accusantium magni ipsam deserunt dolores quaerat
@@ -56,7 +56,7 @@ function Dizayn() {
       <div className="grafik_kurs">
         <div data-aos="fade-right" data-aos-duration="1000">
           <h2>
-            <span>5 oy</span> <br /> Kurs davomiyligi
+            <span>8 oy</span> <br /> Kurs davomiyligi
           </h2>
         </div>
         <div data-aos="fade-right" data-aos-duration="2000">
@@ -73,17 +73,16 @@ function Dizayn() {
       <div className="grafik_info" data-aos="zoom-in" data-aos-duration="1500">
         <div>
           <h2>
-            <span>Grafik qanday</span> qanday soha ?
+            <span>Veb dasturlash qanday</span> qanday soha ?
           </h2>
         </div>
         <div className="grafik_info_in">
           <p>
-            <b> Grafik dizayn</b> — dizayn sohasining yoʻnalishlaridan biri
-            boʻlib, maʼlum axborotni ijtimoiy guruhlarga yetkazish uchun vizual
-            kontent yaratish, ularni tartiblash, loyihalashga xizmat qiladi.
-            Grafik dizaynning asosiy maqsadi muammolarni aniqlash va ularni
-            ijodkorlik bilan innovatsion va raqamli vositalar yordamida
-            oʻzgartirish va toʻgʻri talqin qilishdan iborat.
+            <b>Veb Dasturlash</b> — esa veb brauzerda ishlaydigan veb sahifa va
+            veb ilovalarni ishlab chiqish va ularning sifatini doimiy ravishda
+            nazorat qilish sohasidir. Kundalik ravishda dunyo aholisining juda
+            katta qismi foydalanadigan Google, Yandex va Facebook tarmoqlari Veb
+            Dasturlashning namunalaridir
           </p>
         </div>
       </div>
@@ -116,13 +115,13 @@ function Dizayn() {
         </div>
         <div>
           <img
-            data-aos="fade-left"
+            data-aos="zoom-in-right"
             data-aos-duration="2000"
             src={natijarasm5}
             alt="Teamit grafik dizayn"
           />
           <img
-            data-aos="fade-left"
+            data-aos="zoom-in-right"
             data-aos-duration="2000"
             src={natijarasm6}
             alt="Teamit grafik dizayn"
@@ -131,7 +130,7 @@ function Dizayn() {
       </div>
       <div ref={ref} className="grafikPrice">
         <h2>
-          Dizayner <b>Maoshlari</b>
+          Dasturchi <b>Maoshlari</b>
         </h2>
         <div className="grafik_price">
           <div data-aos="zoom-in-right" data-aos-duration="1000">
@@ -145,7 +144,7 @@ function Dizayn() {
           <div data-aos="zoom-in-right" data-aos-duration="2000">
             <h2>
               <span>
-                {inView && <CountUp start={0} end={500} duration={2} />}$
+                {inView && <CountUp start={0} end={700} duration={2} />}$
               </span>
               <br /> O'rtacha maosh
             </h2>
@@ -153,7 +152,7 @@ function Dizayn() {
           <div data-aos="zoom-in-right" data-aos-duration="2500">
             <h2>
               <span>
-                {inView && <CountUp start={0} end={1500} duration={2} />}$
+                {inView && <CountUp start={0} end={3000} duration={2} />}$
               </span>{" "}
               <br /> Eng yuqori maosh
             </h2>
