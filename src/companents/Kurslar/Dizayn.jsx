@@ -7,12 +7,13 @@ import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
 import { GoTriangleRight } from "react-icons/go";
 import Contact from "../Section/contact";
-import natijarasm1 from '../../Image/natijarasm1.jpg'
-import natijarasm2 from '../../Image/natijarasm2.jpg'
-import natijarasm3 from '../../Image/natijarasm3.png'
-import natijarasm4 from '../../Image/natijarasm4.jpg'
-import natijarasm5 from '../../Image/natijarasm5.jpg'
-import natijarasm6 from '../../Image/natijarasm6.jpg'
+import Footer from "../Footer/footer";
+import natijarasm1 from "../../Image/natijarasm1.jpg";
+import natijarasm2 from "../../Image/natijarasm2.jpg";
+import natijarasm3 from "../../Image/natijarasm3.png";
+import natijarasm4 from "../../Image/natijarasm4.jpg";
+import natijarasm5 from "../../Image/natijarasm5.jpg";
+import natijarasm6 from "../../Image/natijarasm6.jpg";
 
 function Dizayn() {
   useEffect(() => {
@@ -91,25 +92,25 @@ function Dizayn() {
           <img
             data-aos="zoom-in-right"
             data-aos-duration="1000"
-            src="https://i.pinimg.com/564x/e5/35/6c/e5356c9766b49e62e80a631f821611dd.jpg"
+            src={natijarasm1}
             alt="Teamit grafik dizayn"
           />
           <img
             data-aos="zoom-in-right"
             data-aos-duration="1000"
-            src="https://i.pinimg.com/564x/e5/35/6c/e5356c9766b49e62e80a631f821611dd.jpg"
+            src={natijarasm2}
             alt="Teamit grafik dizayn"
           />
           <img
             data-aos="zoom-in-right"
             data-aos-duration="1000"
-            src="https://i.pinimg.com/564x/e5/35/6c/e5356c9766b49e62e80a631f821611dd.jpg"
+            src={natijarasm3}
             alt="Teamit grafik dizayn"
           />
           <img
             data-aos="zoom-in-right"
             data-aos-duration="1000"
-            src="https://i.pinimg.com/564x/e5/35/6c/e5356c9766b49e62e80a631f821611dd.jpg"
+            src={natijarasm4}
             alt="Teamit grafik dizayn"
           />
         </div>
@@ -117,13 +118,13 @@ function Dizayn() {
           <img
             data-aos="fade-left"
             data-aos-duration="2000"
-            src="https://i.pinimg.com/564x/e5/35/6c/e5356c9766b49e62e80a631f821611dd.jpg"
+            src={natijarasm5}
             alt="Teamit grafik dizayn"
           />
           <img
             data-aos="fade-left"
             data-aos-duration="2000"
-            src="https://i.pinimg.com/564x/e5/35/6c/e5356c9766b49e62e80a631f821611dd.jpg"
+            src={natijarasm6}
             alt="Teamit grafik dizayn"
           />
         </div>
@@ -243,10 +244,11 @@ function Dizayn() {
         <h2>Kursdan soʻng qayerda ishlay olasiz ?</h2>
         <ul>
           <li>
-            <GoTriangleRight /> Marketing 
+            <GoTriangleRight /> Marketing
           </li>
           <li>
-            <GoTriangleRight />SMM agentlik
+            <GoTriangleRight />
+            SMM agentlik
           </li>
           <li>
             <GoTriangleRight /> Dizayn studiya
@@ -262,34 +264,19 @@ function Dizayn() {
           <b>Oʻquvchilarimiz</b> kurs davomida tayyorlagan loyihalari
         </h2>
         <div>
-          <img
-            src={natijarasm1}
-            alt="Teamit.uz"
-          />
-          <img
-            src={natijarasm2}
-            alt="Teamit.uz"
-          />
-          <img
-            src={natijarasm3}
-            alt="Teamit.uz"
-          />
-          <img
-            src={natijarasm4}
-            alt="Teamit.uz"
-          />
-          <img
-            src={natijarasm5}
-            alt="Teamit.uz"
-          />
-          <img
-            src={natijarasm6}
-            alt="Teamit.uz"
-          />
+          <img src={natijarasm1} alt="Teamit.uz" />
+          <img src={natijarasm2} alt="Teamit.uz" />
+          <img src={natijarasm3} alt="Teamit.uz" />
+          <img src={natijarasm4} alt="Teamit.uz" />
+          <img src={natijarasm5} alt="Teamit.uz" />
+          <img src={natijarasm6} alt="Teamit.uz" />
         </div>
       </div>
       <Contact />
-      <br /><br /><br />
+      <br />
+      <br />
+      <br />
+      <Footer />
     </>
   );
 }

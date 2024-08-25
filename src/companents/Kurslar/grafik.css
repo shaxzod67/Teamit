@@ -132,6 +132,8 @@
   width: 400px;
   height: 200px;
   object-fit: cover;
+  border-radius: 6px;
+
 }
 .grafik_img div:nth-child(2) {
   width: calc(100% / 2.5 - 10px);
@@ -142,8 +144,10 @@
 }
 
 .grafik_img div:nth-child(2) img {
-  width: 200px;
-  height: 400px;
+  width: 250px;
+  height: 420px;
+  border-radius: 6px;
+  object-fit: cover;
 }
 
 .grafikPrice {

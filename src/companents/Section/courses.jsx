@@ -4,9 +4,14 @@ import grafikImg from "../../Image/Grafik dizayn icon.png";
 import ofisImg from "../../Image/Ofis dasturlash icon.png";
 import robotImg from "../../Image/Robototexnika icon.png";
 import { GoArrowUpRight } from "react-icons/go";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function Courses() {
+  const navigate = useNavigate();
+
+  const handleGrafik = () => {
+    navigate('/dizayn')
+  };
   return (
     <div className="courses" id="kurslar">
       <h2>Bizning yo'nalishlar</h2>
@@ -34,7 +39,7 @@ function Courses() {
               <h3>Grafik dizayn</h3>
               <p>5 oy</p>
             </div>
-            <a href="">
+            <a onClick={handleGrafik} href="">
               <GoArrowUpRight />
               Batafsil
             </a>
