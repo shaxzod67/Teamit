@@ -1,13 +1,30 @@
-import React from "react";
-import { FaTelegram } from "react-icons/fa";
+import React, { useState, useEffect } from "react";
+import { FaTelegram, FaGithub } from "react-icons/fa";
 import { BiLogoInstagramAlt } from "react-icons/bi";
-import { FaGithub } from "react-icons/fa6";
 import Yormuhammad from "../../Image/Yormuhammad.jpg";
 import Javohir from "../../Image/Javohir.jpg";
 import Samariddin from "../../Image/Samariddin.jpg";
 import Iskandar from "../../Image/Iskandar.jpg";
 import Anvar from "../../Image/Anvar.jpg";
+
 function Team() {
+  const [selectedMemberId, setSelectedMemberId] = useState(null);
+
+  useEffect(() => {
+    if (selectedMemberId !== null) {
+      // Disable scrolling
+      document.body.style.overflow = "hidden";
+    } else {
+      // Re-enable scrolling
+      document.body.style.overflow = "auto";
+    }
+
+    // Cleanup function to re-enable scrolling when the component unmounts
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [selectedMemberId]);
+
   const team = [
     {
       id: 1,
@@ -16,12 +33,12 @@ function Team() {
       surname: "G'aniyev",
       position: "Direktor",
       university: "Toshkent Axborot Texnologiyalar Universiteti",
-      // experience: "4-yil",
       telegram: "https://t.me/olimjonov_44",
       instagram: "https://www.instagram.com/olimjonov.23",
       gitHub: "https://github.com/shaxzod67",
     },
     {
+      id: 2,
       image: Javohir,
       name: "Javohir",
       surname: "Abduraimov",
@@ -33,7 +50,7 @@ function Team() {
       gitHub: "https://www.jabohircoder.uz",
     },
     {
-      id: 2,
+      id: 3,
       image: Samariddin,
       name: "Samariddin",
       surname: "Sattorov",
@@ -45,7 +62,7 @@ function Team() {
       gitHub: "https://github.com/shaxzod67",
     },
     {
-      id: 3,
+      id: 4,
       image: Iskandar,
       name: "Iskandar",
       surname: "Oqilov",
@@ -57,7 +74,7 @@ function Team() {
       gitHub: "https://github.com/shaxzod67",
     },
     {
-      id: 4,
+      id: 5,
       image: Anvar,
       name: "Anvar",
       surname: "Tursunov",
@@ -69,45 +86,90 @@ function Team() {
       gitHub: "https://github.com/shaxzod67",
     },
   ];
+
+  const handleClick = (id) => {
+    setSelectedMemberId(id);
+  };
+
+  const handleClose = () => {
+    setSelectedMemberId(null);
+  };
+
+  const selectedMember = team.find((member) => member.id === selectedMemberId);
+
   return (
     <div className="team">
-      <h2 className="team_h2">Bizning Jamoa</h2>
-      <div className="team_boxs">
+      {selectedMember && (
         <div className="showTeam">
           <div className="showTeamInfo">
-            <h2>
-              hello world
-            </h2>
+            <div>
+              <img
+                src={selectedMember.image}
+                alt={`${selectedMember.name} ${selectedMember.surname}`}
+              />
+            </div>
+            <div>
+              <h2>
+                {selectedMember.name} <br /> {selectedMember.surname}
+              </h2>
+              <p>{selectedMember.university}</p>
+              <p>{selectedMember.position}</p>
+              {selectedMember.experience && (
+                <p>Tajriba: {selectedMember.experience}</p>
+              )}
+              <div className="social-icons">
+                <a
+                  href={selectedMember.telegram}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaTelegram />
+                </a>
+                <a
+                  href={selectedMember.instagram}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <BiLogoInstagramAlt />
+                </a>
+                <a
+                  href={selectedMember.gitHub}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaGithub />
+                </a>
+              </div>
+            </div>
+            <button onClick={handleClose} className="close-btn">
+              Yopish
+            </button>
           </div>
         </div>
-        {team.map((mall) => {
-          return (
-            <div className="team_box" id={mall.id}>
-              <div className="team_img">
-                <img src={mall.image} alt="Jamoa azosi" />
-              </div>
-              <div className="team_info">
-                <h2>{mall.surname}</h2>
-                <h2>{mall.name}</h2>
-                <h3>
-                  {mall.position} <span>{mall.experience}</span>
-                </h3>
-                {/* <p>{mall.university}</p>
-                <div className="team_link">
-                  <a href={mall.telegram}>
-                    <FaTelegram />
-                  </a>
-                  <a href={mall.instagram}>
-                    <BiLogoInstagramAlt />
-                  </a>
-                  <a href={mall.gitHub}>
-                    <FaGithub />
-                  </a>
-                </div> */}
-              </div>
-            </div>  
-          );
-        })}
+      )}
+      <h2 className="team_h2">Bizning Jamoa</h2>
+      <div className="team_boxs">
+        {team.map((member) => (
+          <div
+            key={member.id}
+            className="team_box"
+            onClick={() => handleClick(member.id)}
+          >
+            <div className="team_img">
+              <img
+                src={member.image}
+                alt={`${member.name} ${member.surname}`}
+              />
+            </div>
+            <div className="team_info">
+              <h2>{member.surname}</h2>
+              <h2>{member.name}</h2>
+              <h3>
+                {member.position} <span>{member.experience}</span>
+              </h3>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );
