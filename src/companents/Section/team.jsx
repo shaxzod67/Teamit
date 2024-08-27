@@ -6,6 +6,7 @@ import Javohir from "../../Image/Javohir.jpg";
 import Samariddin from "../../Image/Samariddin.jpg";
 import Iskandar from "../../Image/Iskandar.jpg";
 import Anvar from "../../Image/Anvar.jpg";
+import { IoCloseOutline } from "react-icons/io5";
 
 function Team() {
   const [selectedMemberId, setSelectedMemberId] = useState(null);
@@ -109,41 +110,45 @@ function Team() {
               />
             </div>
             <div>
-              <h2>
-                {selectedMember.name} <br /> {selectedMember.surname}
-              </h2>
-              <p>{selectedMember.university}</p>
-              <p>{selectedMember.position}</p>
-              {selectedMember.experience && (
-                <p>Tajriba: {selectedMember.experience}</p>
-              )}
-              <div className="social-icons">
-                <a
-                  href={selectedMember.telegram}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <FaTelegram />
-                </a>
-                <a
-                  href={selectedMember.instagram}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <BiLogoInstagramAlt />
-                </a>
-                <a
-                  href={selectedMember.gitHub}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <FaGithub />
-                </a>
+              <div className="showBtn">
+                <button onClick={handleClose} className="close-btn">
+                  <IoCloseOutline />
+                </button>
+              </div>
+              <div className="showInfo">
+                <h2>
+                  {selectedMember.name} <br /> {selectedMember.surname}
+                </h2>
+                <p>{selectedMember.university}</p>
+                <p>{selectedMember.position}</p>
+                {selectedMember.experience && (
+                  <p>Tajriba: {selectedMember.experience}</p>
+                )}
+                {/* <div className="social-icons">
+                  <a
+                    href={selectedMember.telegram}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FaTelegram />
+                  </a>
+                  <a
+                    href={selectedMember.instagram}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <BiLogoInstagramAlt />
+                  </a>
+                  <a
+                    href={selectedMember.gitHub}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FaGithub />
+                  </a>
+                </div> */}
               </div>
             </div>
-            <button onClick={handleClose} className="close-btn">
-              Yopish
-            </button>
           </div>
         </div>
       )}
