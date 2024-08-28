@@ -47,8 +47,8 @@ function Nav() {
     <div>
       <nav
         className={`${
-          showNav ? "translate-y-0" : "-translate-y-full"
-        } transition-transform duration-300`}
+          showNav ? "translate-y-0" : "-translate-y-full z-10"
+        } transition-transform duration-300 z-10`}
       >
         <div className="nav_in">
           <div className="logoDiv">
