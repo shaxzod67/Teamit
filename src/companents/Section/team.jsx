@@ -102,6 +102,7 @@ function Team() {
     <div className="team">
       {selectedMember && (
         <div className="showTeam">
+          <div className="overlay" onClick={handleClose}></div>
           <div className="showTeamInfo">
             <div>
               <img
