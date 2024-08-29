@@ -1329,25 +1329,30 @@ footer {
     height: 30vh;
     object-fit: cover;
   }
+  .overlay{
+    display: none;
+  }
   .showTeamInfo {
     width: 100vh;
     height: 100vh;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: auto;
     align-items: center;
-    justify-content: start;
+    justify-content: center;
     flex-wrap: wrap;
     line-height: 50px;
   }
   .showTeamInfo div:nth-child(2) {
-    width: 100%;
+    width: 300px;
+    border: 1px solid gray;
   }
   .showTeamInfo .showBtn {
     position: relative;
     left: 5px;
-    top: -430px;
+    top: -340px;
+    border: 1px solid red;
   }
-  .showTeamInfo .showBtn svg{
+  .showTeamInfo .showBtn svg {
     font-size: 30px;
   }
   .showInfo h2 {
@@ -1357,8 +1362,8 @@ footer {
     font-size: 16px;
   }
   .showTeamInfo div img {
-    width: 350px;
-    height: 400px;
+    width: 300px;
+    height: 300px;
     margin-bottom: 0px;
     margin-top: 20px;
   }
