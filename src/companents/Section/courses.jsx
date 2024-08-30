@@ -12,11 +12,15 @@ function Courses() {
   const handleGrafik = () => {
     navigate('/dizayn')
   };
+
+  const handleWeb = () => {
+    navigate('/webdasturlash')
+  };
   return (
     <div className="courses" id="kurslar">
       <h2>Bizning yo'nalishlar</h2>
       <div className="courses_boxs">
-        <div className="courses_box">
+        <div className="courses_box" onClick={handleWeb}>
           <div className="courses_info">
             <div>
               <h3>Web Dasturlash</h3>
@@ -33,7 +37,7 @@ function Courses() {
             <img src={dasturalshImg} alt="" />
           </div>
         </div>
-        <div className="courses_box">
+        <div className="courses_box" onClick={handleWeb}>
           <div className="courses_info">
             <div>
               <h3>Grafik dizayn</h3>

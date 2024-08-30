@@ -179,20 +179,20 @@ function Dizayn() {
           {activeModule === 1 && (
             <div>
               <span>1 oy</span> <br />
-              Vektor dasturlarini oʻrganish
+              Veb dasturlashga kirish
               <ol>
-                <li>1. Illustrator</li>
-                <li>2. CorelDraw</li>
+                <li>1. HTML</li>
+                <li>2. HTML , tegallari</li>
               </ol>
             </div>
           )}
           {activeModule === 2 && (
             <div>
               <span>2 oy</span> <br />
-              Vektor dasturlarini oʻrganish
+             Sayt dizayn
               <ol>
-                <li>1. Illustrator</li>
-                <li>2. CorelDraw</li>
+                <li>1. Css</li>
+                <li>2.Flex</li>
               </ol>
             </div>
           )}
