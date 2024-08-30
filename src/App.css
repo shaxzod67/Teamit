@@ -692,10 +692,15 @@ header {
   background: #fff;
   display: flex;
   align-items: start;
-  justify-content: space-between;
+  justify-content: start;
 }
-.showTeamInfo div:nth-child(2) {
-  width: calc(100% / 1.6 - 10px);
+.showImg {
+  width: calc(100% / 2 - 10px);
+  height: auto;
+}
+
+.showInfoBox {
+  width: calc(100% / 2 - 10px);
   height: auto;
 }
 .showTeamInfo .showBtn {
@@ -800,6 +805,11 @@ footer {
 .footer_right p {
   color: gray;
   font-size: 18px;
+}
+.showBtn1 {
+  display: none;
+  text-align: end;
+  font-size: 25px;
 }
 
 @keyframes contactani {
@@ -1057,26 +1067,40 @@ footer {
     height: 40vh;
     object-fit: cover;
   }
-  .showTeamInfo {
+  .showTeam {
     width: 100%;
-    height: 350px;
-    padding: 20px 10px;
-    column-gap: 20px;
   }
-  .showTeamInfo div:nth-child(2) {
-    width: calc(100% / 1.6 - 10px);
+  .overlay {
+    inset: 0;
+  }
+  .showTeamInfo {
+    width: 90%;
+    height: 350px;
+    align-items: center;
+    column-gap: 20px;
+    padding: 20px 10px;
+  }
+  .showImg {
+    width: calc(100% / 2 - 10px);
+  }
+
+  .showInfoBox {
+    width: calc(100% / 2 - 10px);
+    height: 300px;
   }
   .showTeamInfo .showBtn {
+    text-align: end;
     font-size: 25px;
   }
   .showInfo h2 {
+    line-height: 35px;
     font-size: 30px;
   }
   .showInfo p {
     font-size: 16px;
   }
   .showTeamInfo div img {
-    width: 250px;
+    width: 300px;
     height: 300px;
   }
 }
@@ -1288,11 +1312,12 @@ footer {
   }
   .team_box {
     width: 100%;
-    height: 550px;
+    height: auto;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    box-shadow: 1px 1px 25px gray;
   }
 
   .team_info h2 {
@@ -1329,7 +1354,7 @@ footer {
     height: 30vh;
     object-fit: cover;
   }
-  .overlay{
+  .overlay {
     display: none;
   }
   .showTeamInfo {
@@ -1342,15 +1367,14 @@ footer {
     flex-wrap: wrap;
     line-height: 50px;
   }
-  .showTeamInfo div:nth-child(2) {
-    width: 300px;
-  }
+
   .showTeamInfo .showBtn {
-    position: relative;
-    left: 5px;
-    top: -370px;
+    display: none;
   }
-  .showTeamInfo .showBtn svg {
+  .showBtn1 {
+    display: block;
+  }
+  .showBtn1 svg {
     font-size: 30px;
   }
   .showInfo h2 {
@@ -1359,10 +1383,47 @@ footer {
   .showInfo p {
     font-size: 16px;
   }
+  .showTeam {
+    width: 100%;
+    background: #fff;
+    align-items: start;
+  }
+  .overlay {
+    display: none;
+    inset: 0;
+  }
+  .showTeamInfo {
+    width: 90%;
+    height: auto;
+    column-gap: 0px;
+    padding: 0px;
+  }
+  .showImg {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .showInfoBox {
+    width: 100%;
+    height: 300px;
+  }
+  .showTeamInfo .showBtn {
+    text-align: end;
+    font-size: 25px;
+  }
+  .showInfo h2 {
+    line-height: 35px;
+    font-size: 30px;
+  }
+  .showInfo p {
+    font-size: 16px;
+  }
   .showTeamInfo div img {
     width: 300px;
     height: 300px;
-    margin-bottom: 0px;
-    margin-top: 20px;
+    object-fit: scale-down;
+    border-radius: 6px;
   }
 }

@@ -104,13 +104,18 @@ function Team() {
         <div className="showTeam">
           <div className="overlay" onClick={handleClose}></div>
           <div className="showTeamInfo">
-            <div>
+          <div className="showBtn1">
+                <button onClick={handleClose} className="close-btn">
+                  <IoCloseOutline />
+                </button>
+              </div>
+            <div className="showImg">
               <img
                 src={selectedMember.image}
                 alt={`${selectedMember.name} ${selectedMember.surname}`}
               />
             </div>
-            <div>
+            <div className="showInfoBox">
               <div className="showBtn">
                 <button onClick={handleClose} className="close-btn">
                   <IoCloseOutline />
